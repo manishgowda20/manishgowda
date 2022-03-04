@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-  stages ( 'Build' ) {
+  stage ('Build') {
     steps {
         sh '''
             sleep 5
@@ -9,7 +9,7 @@ pipeline {
             '''
         }
         }
-        stage ( 'Test' ) {
+        stage ('Test') {
         steps {
           sh '''
               sleep 5
@@ -17,7 +17,7 @@ pipeline {
               '''
           }
           }
-          Stage ( 'Deploy') {
+          Stage ('Deploy') {
               steps {
                     sh '''
                           sleep 5
